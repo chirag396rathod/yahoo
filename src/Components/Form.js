@@ -11,7 +11,7 @@ function ValidForm() {
   const selectHandler = (e) => {
     setdobmon(e.target.value);
   };
-  
+
   const {
     register,
     handleSubmit,
@@ -111,6 +111,7 @@ function ValidForm() {
             name="pass"
             id="pass"
             placeholder="Password"
+            
             {...register("encryptpassword", {
               required: "this fild is required",
               minLength: {
@@ -118,6 +119,7 @@ function ValidForm() {
                 message: "Password Length Must Greter then 8",
               },
             })}
+            onKeyUp={() => trigger("encryptpassword")}
           />
           {errors.encryptpassword && (
             <div className="error">{errors.encryptpassword.message}</div>
