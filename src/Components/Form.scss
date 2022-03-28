@@ -1,0 +1,148 @@
+$primarycolor: #f9f9fa;
+$btnprimarycolor: #157ddf;
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+.back {
+  background-color: $primarycolor;
+  height: 85vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  a{
+      text-decoration: none;
+      color: #188fff;
+  }
+  & form {
+    width: 380px;
+    box-shadow: 1px 0.5px 10px rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    background-color: #fff;
+
+    & .title {
+      text-align: center;
+      & h1 {
+        font-size: 25px;
+        font-weight: 400;
+        padding: 10px 0;
+      }
+      & h3 {
+        font-size: 15px;
+        font-weight: 400;
+        padding-bottom: 8px;
+      }
+    }
+
+    & .form-input {
+      padding: 10px;
+      & input {
+        padding: 7px 10px;
+        border: none;
+        border-bottom: 1px solid rgb(94, 94, 94);
+        outline: none;
+        width: 100%;
+        font-size: 15px;
+        
+      }
+      & input:focus {
+        border-bottom: 1px solid $btnprimarycolor;
+      }
+      & .combo_input {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        .fname_input input {
+          width: 96%;
+        }
+        .fname_input input:first-child {
+          margin-right: 3%;
+        }
+        .sname_input input{
+          width: 100%;
+        }
+
+      }
+      & .date-input{
+          display: flex;
+          width: 100%;
+          justify-content: space-between;
+          & select{
+            width: 430px;
+            margin-right: 10px;
+        }
+        & #day{
+              margin-right: 10px;
+          }
+      }
+      & .error{
+        padding-top: -5px;
+        font-size: 12px;
+        width: 100%;
+        color: red;
+        border-top: 2px solid red;
+    }
+    }
+    .tel{
+      display: flex;
+      justify-content: space-between;
+      .code_select select{
+        padding: 6px 0;
+      }
+      .phno_input input{
+        width: 260px;
+        
+      }
+    }
+    .pass {
+      position: relative;
+      & a {
+        position: absolute;
+        text-decoration: none;
+        top: 25%;
+        right: 4%;
+        color: rgba(0, 0, 0, 0.6);
+      }
+      a:hover {
+        color: $btnprimarycolor;
+      }
+    }
+
+    & select{
+        outline: none;
+        border: none;
+        border-bottom: 1px solid #000;
+    }:focus{
+        border-bottom: 1px solid $btnprimarycolor;
+    }
+    & footer{
+        text-align: center;
+        padding: 10px;
+
+        & .TMC{
+           font-size: 15px;
+           font-weight: normal;
+        }
+        & .btn{
+            padding: 15px 130px;
+            border-radius: 25px;
+            border: none;
+            outline: none;
+            background-color: $btnprimarycolor;
+            margin: 20px 0;
+            font-size: 15px;
+            color: #fff;
+        }
+        .btn:hover{
+            cursor: pointer;
+            background-color: #6457d8;
+        }
+        & .ARA{
+            margin-top: 1rem;
+        }
+      }
+  }
+}
